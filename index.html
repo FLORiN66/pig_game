@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+      <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+      <link type="text/css" rel="stylesheet" href="style.css">
+      <link rel="icon" href="./dice.png">
+      <title>Pig Game</title>
+   </head>
+   <body>
+      <div class="wrapper clearfix">
+         <button class="info" id="myBtn"><i class="ion-ios-information"></i></button>
+
+         <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+               <span class="close">&times;</span>
+               <h2>Pig Game</h2>
+               <ul>
+                    <li>Acesta este un Joc de Noroc!</li>
+                    <li>Jocul are 2 jucători, jucând în runde</li>
+                    <li>Dacă jucătorul aruncă 1 pe primul zar, tot scorul său Curent se pierde. După aceea, este rândul următorului jucător</li>
+                    <li>Dacă jucătorul aruncă pe ambele zaruri 6, tot scorul Curent și Global se pierde. Imediat după aceasta se va trece la urmatorul jucător.</li>
+                    <li>Jucătorul poate alege să „Retină”, ceea ce înseamnă că scorul său Curent se adaugă la scorul său GLOBAL. După aceea, este rândul următorului jucător</li>
+                    <li>Primul jucător care atinge 100 de puncte la scorul GLOBAL câștigă jocul</li>
+               </ul>
+            </div>
+         </div>
+         <div class="player-0-panel active">
+            <div class="player-name" id="name-0" title="Schimba numele">Player 1</div>
+            <div id="playerName1" class="modal-name">
+                <div class="modal-name-content">
+                    <span class="close">&times;</span>
+                    <form>
+                        <label>Schimba Nume Player 1</label>
+                        <input type="text" id="Player1" value="Player 1">
+                        <button type="submit" class="numeBtn">Schimba</button>
+                    </form>
+                 </div>
+            </div>
+            <div class="player-score" id="score-0" title="Scor Global">43</div>
+            <div class="player-current-box">
+               <div class="player-current-label">Scor Curent</div>
+               <div class="player-current-score" id="current-0">11</div>
+            </div>
+         </div>
+         <div class="player-1-panel">
+            <div class="player-name" id="name-1" title="Schimba numele">Player 2</div>
+            <div id="playerName2" class="modal-name">
+                <div class="modal-name-content">
+                    <span class="close">&times;</span>
+                    <form>
+                        <label>Schimba Nume Player 2</label>
+                        <input type="text" id="Player2" value="Player 2">
+                        <button type="submit" class="numeBtn">Schimba</button>
+                    </form>
+                 </div>
+            </div>
+            <div class="player-score" id="score-1" title="Scor Global">72</div>
+            <div class="player-current-box">
+               <div class="player-current-label">Scor Curent</div>
+               <div class="player-current-score" id="current-1">0</div>
+            </div>
+         </div>
+         <button class="btn-new"><i class="ion-ios-plus-outline"></i>Joc Nou</button>
+         <button class="btn-roll" title="Arunca Zaruri"><i class="ion-ios-loop"></i>Roll Dice</button>
+         <button class="btn-hold" title="Retine Scor Curent"><i class="ion-ios-download-outline"></i>Retine</button>
+         <p class="final-score-text" title="Schimba punctajul final">Punctaj Final:</p>
+         <input type="text" placeholder="100" class = "final-score" id="final-score">
+         <img src="dice-5.png" alt="Dice" class="dice" id="dice-1">
+         <img src="dice-5.png" alt="Dice" class="dice" id="dice-2">
+      </div>
+      </div>
+      <script src="application.js"></script>
+   </body>
+</html>
